@@ -1,75 +1,69 @@
 # Bin Packing Solver (MIPS Assembly)
 
 ## Overview
+
 This project implements the **Bin Packing Problem** in **MIPS Assembly Language** using two classic allocation algorithms:
 
 - First Fit
 - Best Fit
 
-The program reads item sizes and bin capacity from an input file, validates the input, executes the selected allocation algorithm, and writes the results to an output file.
+The program reads item sizes from an input file, validates the input, executes the selected bin allocation algorithm, and displays the allocation results.
 
 ## Features
 
 - Implements **First Fit** and **Best Fit** algorithms.
-- Reads input data from a file.
+- Reads item sizes from an input file.
 - Validates input values before processing.
-- Allocates items into bins based on the selected algorithm.
-- Displays and saves the allocation results.
+- Allocates items into bins according to the selected algorithm.
+- Displays the allocation results.
 - Written entirely in **MIPS Assembly**.
 
 ## Algorithms
 
 ### First Fit
-Places each item into the first bin that has enough remaining capacity. If no existing bin can accommodate the item, a new bin is created.
+Places each item into the first bin with enough remaining capacity. If no existing bin can accommodate the item, a new bin is created.
 
 ### Best Fit
-Places each item into the bin that leaves the smallest remaining free space after placement. If no suitable bin exists, a new bin is created.
+Places each item into the bin that leaves the least remaining free space after placement. If no suitable bin exists, a new bin is created.
 
 ## Input Format
 
-The input file should contain:
-
-- Bin capacity
-- Number of items
-- Item sizes
+The input file contains the item sizes, with **one item per line**.
 
 Example:
 
+```text
+0.5
+0.9
+0.1
+0.4
+0.9
+0.4
+0.8
+0.5
+1.3
+0.7
+0.2
+0.1
 ```
-10
-5
-2 5 4 7 1
-```
-
-*(Modify the example to match your project's actual input format if necessary.)*
-
-## Output
-
-The program outputs:
-
-- Number of bins used
-- Assignment of items to bins
-- Remaining capacity of each bin
 
 ## Technologies
 
 - MIPS Assembly
-- MARS Simulator (or QtSPIM)
+- MARS Simulator
 
 ## How to Run
 
-1. Open the project in **MARS** (or **QtSPIM** if compatible).
-2. Load `main_code.asm`.
-3. Make sure the input file is in the correct location.
-4. Run the program.
-5. View the generated output.
+1. Open `main_code.asm` using the **MARS** simulator.
+2. Place the input file in the appropriate directory.
+3. Assemble and run the program.
+4. Follow the program prompts to execute the desired allocation algorithm.
 
 ## Project Structure
 
-```
+```text
 .
 ├── main_code.asm
-├── README.md
 ├── Input.txt
-└── Output.txt
+└── README.md
 ```
